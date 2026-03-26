@@ -1,100 +1,114 @@
-<!--flexbox-->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>paginaIlan</title>
-</head>
+<meta charset="UTF-8">
+<title>Banda Rock - Compra</title>
+
 <style>
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
+  margin: 0;
+  font-family: Arial;
   color: white;
+
+  background-image: url("original (1).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/* Container for flexboxes */
-section {
-  display: flex;
-}
-
-/* Style the navigation menu */
-nav {
-  flex: 1;
-  background: #ccc;
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #1c1c1c;
   padding: 20px;
+  border-radius: 10px;
 }
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-/* Style the content */
-article {
-  flex: 3;
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
+h1 {
   text-align: center;
-  color: white;
 }
 
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  section {
-    flex-direction: column;
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 12px;
+  background: #ff4da6;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1a8c;
+}
+
+.back {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #aaa;
+  text-decoration: none;
 }
 </style>
 </head>
+
 <body>
 
-<h2>CSS Layout Flexbox</h2>
-<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect.</p>
+<div class="container">
 
-<header>
-  <h2>Cities</h2>
-</header>
+  <h1>Banda Rock</h1>
+  <p><strong>Data:</strong> Sexta - 22h</p>
+  <p><strong>Local:</strong> Casa ao-vivo</p>
 
-<section>
-  <nav>
-    <ul>
-      <li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>
-    </ul>
-  </nav>
-  
-  <article>
-    <h1>London</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-  </article>
-</section>
+  <form>
 
-<footer>
-  <p>Footer</p>
-</footer>
+    <label>Nome completo:</label>
+    <input type="text" placeholder="Seu nome" required>
+
+    <label>Email:</label>
+    <input type="email" placeholder="seu@email.com" required>
+
+    <label>Tipo de ingresso:</label>
+    <select required>
+      <option value="">Selecione</option>
+      <option>Pista</option>
+      <option>Camarote</option>
+      <option>VIP</option>
+    </select>
+
+    <label>Assento:</label>
+    <select required>
+      <option value="">Escolha um assento</option>
+      <option>A1</option>
+      <option>A2</option>
+      <option>B1</option>
+      <option>B2</option>
+    </select>
+
+    <button type="submit">Comprar ingresso</button>
+
+  </form>
+
+  <a href="index.html" class="back">⬅ Voltar</a>
+
+</div>
 
 </body>
 </html>
